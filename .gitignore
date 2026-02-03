@@ -1,0 +1,34 @@
+# Dependency directories
+node_modules/
+
+# Logs and diagnostics
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Test and coverage outputs
+coverage/
+.nyc_output/
+
+# Build artifacts
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+
+# Package manager caches
+.npm/
+
+# OS generated files
+Thumbs.db
+.DS_Store
