@@ -1,7 +1,11 @@
 const express = require('express');
+const createListViewRouter = require('./list-view-router');
+const createListEditRouter = require('./list-edit-router');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
 
 const tasks = [
   {
@@ -21,9 +25,8 @@ const tasks = [
   },
 ];
 
-app.get('/tasks', (req, res) => {
-  res.json(tasks);
-});
+app.use(createListViewRouter(tasks));
+app.use(createListEditRouter(tasks));
 
 app.listen(PORT, () => {
   console.log(`Task list server listening on port ${PORT}`);
