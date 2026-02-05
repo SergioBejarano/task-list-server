@@ -7,6 +7,15 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+const allowedMethods = new Set(['GET', 'POST', 'PUT', 'DELETE']);
+
+app.use((req, res, next) => {
+  if (!allowedMethods.has(req.method)) {
+    return res.status(405).json({ error: 'HTTP method not allowed for this server' });
+  }
+  next();
+});
+
 const tasks = [
   {
     id: 123456,
