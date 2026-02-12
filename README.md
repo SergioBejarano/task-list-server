@@ -63,4 +63,3 @@ El servidor expone los endpoints anteriores y persiste los cambios en memoria du
 - **Bots o asistentes:** crear comandos que llamen a `POST /tasks` cuando un usuario capture un pendiente en chat.
 - **Integraciones con dashboards:** usar `GET /tasks` para alimentar reportes de productividad o SLA.
 
-Este README resume el trabajo realizado en la rama `review-1` y sirve como guía rápida para cualquier persona que necesite entender, probar o extender el Task List Server.
